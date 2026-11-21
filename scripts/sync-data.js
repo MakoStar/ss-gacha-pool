@@ -608,6 +608,41 @@ if (local) {
   process.exit(0)
 }
 
+/** 还原历史卡池的常驻清单 尚未入池的常驻货物不应出现在更早的卡池里 */
+function applyStandardTimeline(banners) {
+  const starter = banners.find((banner) => Number(banner.gachaType) === 5)
+  const permanentTrekker = banners.find((banner) => Number(banner.gachaType) === 2)
+  const mixed = banners.find((banner) => Number(banner.gachaType) === 10 && banner.endTime)
+  if (!starter || !permanentTrekker || !mixed) return
+
+  const baseline = new Set(starter.goods.map((item) => item.id))
+  const addedTrekker = permanentTrekker.goods
+    .filter((item) => item.rarity === 5 && item.kind === 'trekker' && !baseline.has(item.id))
+    .map((item) => item.id)
+  if (addedTrekker.length === 0) return
+
+  const additions = new Set(addedTrekker)
+  const windows = new Map()
+  for (const banner of banners) {
+    if (banner.startTime) windows.set(`${banner.startTime}|${banner.endTime}`, banner)
+  }
+  for (const banner of banners) {
+    if (!banner.goods.some((item) => item.featured && addedTrekker.includes(item.id))) continue
+    const paired = windows.get(`${banner.startTime}|${banner.endTime}`)
+    if (!paired || paired === banner) continue
+    for (const item of paired.goods) {
+      if (item.featured && item.rarity === 5 && item.kind === 'disc') additions.add(item.id)
+    }
+  }
+
+  const arrival = Date.parse(mixed.endTime)
+  for (const banner of banners) {
+    if (!banner.endTime) continue
+    if (Date.parse(banner.endTime) >= arrival) continue
+    banner.goods = banner.goods.filter((item) => item.featured || !additions.has(item.id))
+  }
+}
+
 /** 当期排序 UP 优先 复刻随后 */
 function compareCurrentPools(a, b) {
   if (a.isRerun !== b.isRerun) return a.isRerun ? 1 : -1
@@ -615,6 +650,8 @@ function compareCurrentPools(a, b) {
   if (kindDiff !== 0) return kindDiff
   return timeValue(b) - timeValue(a) || b.sort - a.sort || b.id - a.id
 }
+
+applyStandardTimeline(banners)
 
 /** 选取首屏主推卡池 */
 const featured = banners.find((banner) => banner.bucket === 'current' && !banner.isRerun && banner.poolKind === 'trekker')

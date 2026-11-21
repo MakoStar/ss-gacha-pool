@@ -8,7 +8,7 @@
     "TW"
   ],
   "dataSource": "local",
-  "generatedAt": "2026-11-21T14:04:55.252Z",
+  "generatedAt": "2026-11-21T17:10:45.915Z",
   "source": "https://api.ennead.cc/stella",
   "featuredId": 10161,
   "banners": [
@@ -19882,29 +19882,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -19924,29 +19901,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -21413,29 +21367,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -21524,29 +21455,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -22668,29 +22576,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -22710,29 +22595,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -24199,29 +24061,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -24310,29 +24149,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -25454,29 +25270,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -25496,29 +25289,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -26985,29 +26755,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -27096,29 +26843,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -28240,29 +27964,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -28282,29 +27983,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -29771,29 +29449,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -29882,29 +29537,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -31045,29 +30677,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -32534,29 +32143,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -32645,29 +32231,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -33789,29 +33352,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -33831,29 +33371,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -35320,29 +34837,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -35431,29 +34925,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -36553,29 +36024,6 @@
           "prob": 0.125
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -36595,29 +36043,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -38116,29 +37541,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214028,
           "name": "白日花园",
           "i18n": {
@@ -38204,29 +37606,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.0625
         },
@@ -39365,29 +38744,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -39407,29 +38763,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -40896,29 +40229,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -41007,29 +40317,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -42129,29 +41416,6 @@
           "prob": 0.125
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -42171,29 +41435,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -43692,29 +42933,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -43780,29 +42998,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.0625
         },
@@ -44941,29 +44136,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -44983,29 +44155,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -46472,29 +45621,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -46583,29 +45709,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -47723,29 +46826,6 @@
           "icon": "Chixia.png",
           "portrait": "head_14101_XL.png",
           "cnIcon": "head_14101_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -49235,29 +48315,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -50467,29 +49524,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -50509,29 +49543,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -51998,29 +51009,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -52109,29 +51097,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -53272,29 +52237,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -54853,29 +53795,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 213005,
           "name": "★~嘭嘭少女~★",
           "i18n": {
@@ -55993,29 +54912,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -56035,29 +54931,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -57524,29 +56397,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -57635,29 +56485,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -58779,29 +57606,6 @@
           "prob": 0.125
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -58821,29 +57625,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -60318,29 +59099,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -60406,29 +59164,6 @@
           "icon": "outfit_4036_b.png",
           "portrait": null,
           "cnIcon": "outfit_4036_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.0625
         },
@@ -61567,29 +60302,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -61609,29 +60321,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -63098,29 +61787,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -63209,29 +61875,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -64330,29 +62973,6 @@
           "prob": 0.125
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -64372,29 +62992,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -65869,29 +64466,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -65980,29 +64554,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.0625
         },
@@ -67141,29 +65692,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -67183,29 +65711,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -68672,29 +67177,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -68783,29 +67265,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -69904,29 +68363,6 @@
           "prob": 0.125
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -69946,29 +68382,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -71466,29 +69879,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214028,
           "name": "白日花园",
           "i18n": {
@@ -71554,29 +69944,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.0625
         },
@@ -72715,29 +71082,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -72757,29 +71101,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -74246,29 +72567,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -74357,29 +72655,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -75478,29 +73753,6 @@
           "prob": 0.125
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -75520,29 +73772,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -77017,29 +75246,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -77128,29 +75334,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.0625
         },
@@ -78289,29 +76472,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -78331,29 +76491,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -79820,29 +77957,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -79931,29 +78045,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -81052,29 +79143,6 @@
           "prob": 0.125
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -81094,29 +79162,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -82591,29 +80636,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -82702,29 +80724,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.0625
         },
@@ -83863,29 +81862,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -83905,29 +81881,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -85394,29 +83347,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -85505,29 +83435,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -86649,29 +84556,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -86691,29 +84575,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -88180,29 +86041,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -88291,29 +86129,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -89431,52 +87246,6 @@
           "icon": "Chixia.png",
           "portrait": "head_14101_XL.png",
           "cnIcon": "head_14101_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -90974,29 +88743,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -91062,29 +88808,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.0625
         },
@@ -92223,29 +89946,6 @@
           "prob": 0.1111111111111111
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -92265,29 +89965,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.1111111111111111
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.1111111111111111
         },
@@ -93754,29 +91431,6 @@
           "prob": 0.05555555555555555
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -93865,29 +91519,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.05555555555555555
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.05555555555555555
         },
@@ -94986,29 +92617,6 @@
           "prob": 0.125
         },
         {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
           "id": 149,
           "name": "格芮",
           "i18n": {
@@ -95028,29 +92636,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -96548,29 +94133,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -96636,29 +94198,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.0625
         },
@@ -97793,29 +95332,6 @@
           "icon": "Chixia.png",
           "portrait": "head_14101_XL.png",
           "cnIcon": "head_14101_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 144,
-          "name": "千都世",
-          "i18n": {
-            "name": {
-              "CN": "千都世",
-              "EN": "Chitose",
-              "JP": "チトセ",
-              "KR": "치토세",
-              "TW": "千都世"
-            }
-          },
-          "element": "Aqua",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Chitose.png",
-          "portrait": "head_14401_XL.png",
-          "cnIcon": "head_14401_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -99305,29 +96821,6 @@
           "prob": 0.0625
         },
         {
-          "id": 214026,
-          "name": "潋滟故池水",
-          "i18n": {
-            "name": {
-              "CN": "潋滟故池水",
-              "EN": "Sword Against Stream",
-              "JP": "古池の水音",
-              "KR": "반짝이는 옛 연못",
-              "TW": "瀲灩故池水"
-            }
-          },
-          "element": "Aqua",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4026_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4026_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
           "id": 214027,
           "name": "龙飞凤舞",
           "i18n": {
@@ -100556,29 +98049,6 @@
           "icon": "Gerie.png",
           "portrait": "head_14901_XL.png",
           "cnIcon": "head_14901_XXL.webp",
-          "cnDir": "head",
-          "prob": 0.125
-        },
-        {
-          "id": 155,
-          "name": "希娅",
-          "i18n": {
-            "name": {
-              "CN": "希娅",
-              "EN": "Shia",
-              "JP": "シア",
-              "KR": "시아",
-              "TW": "希婭"
-            }
-          },
-          "element": "Lux",
-          "kind": "trekker",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "Shia.png",
-          "portrait": "head_15501_XL.png",
-          "cnIcon": "head_15501_XXL.webp",
           "cnDir": "head",
           "prob": 0.125
         },
@@ -102133,29 +99603,6 @@
           "icon": "outfit_4037_b.png",
           "portrait": null,
           "cnIcon": "outfit_4037_b.webp",
-          "cnDir": "outfit",
-          "prob": 0.0625
-        },
-        {
-          "id": 214038,
-          "name": "波光漫游",
-          "i18n": {
-            "name": {
-              "CN": "波光漫游",
-              "EN": "Ripples of Nostalgia",
-              "JP": "波にゆられて",
-              "KR": "파도빛 유랑",
-              "TW": "波光漫游"
-            }
-          },
-          "element": "Lux",
-          "kind": "disc",
-          "rarity": 5,
-          "group": "ssr",
-          "featured": false,
-          "icon": "outfit_4038_b.png",
-          "portrait": null,
-          "cnIcon": "outfit_4038_b.webp",
           "cnDir": "outfit",
           "prob": 0.0625
         },
