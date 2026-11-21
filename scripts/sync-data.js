@@ -629,7 +629,7 @@ const data = {
   language: 'CN',
   languages: LANGUAGES,
   dataSource,
-  generatedAt: new Date().toISOString(),
+  generatedAt: snapshot?.generatedAt ?? new Date().toISOString(),
   source: apiBase,
   featuredId: featured.id,
   banners,
@@ -638,6 +638,10 @@ const data = {
     discs: Array.from(catalogs.discs.values())
   }
 }
+
+/** 忽略生成时间的比对 数据没变就不刷新时间戳 */
+const contentKey = (value) => JSON.stringify({ ...value, generatedAt: '' })
+if (snapshot && contentKey(snapshot) !== contentKey(data)) data.generatedAt = new Date().toISOString()
 
 await writeData(data)
 console.log(`Prepared ${banners.length} banners`)

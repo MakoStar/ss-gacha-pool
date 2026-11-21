@@ -1,0 +1,58 @@
+name: Sync gacha data
+
+on:
+  repository_dispatch:
+    types: [data-updated]
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: sync-data
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Checkout ss-data
+        uses: actions/checkout@v7.0.1
+        with:
+          repository: MakoStar/ss-data
+          path: .data/ss-data
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v6.0.0
+        with:
+          node-version: 22
+
+      - name: Generate data
+        run: node scripts/sync-data.js
+
+      - name: Commit snapshot
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain public/data/gacha-data.json)" ]; then
+            echo "数据无变化，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/gacha-data.json
+          git commit -m "chore(data): 同步卡池数据快照"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref "${{ github.ref_name }}"
