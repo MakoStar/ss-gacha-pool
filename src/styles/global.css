@@ -1629,6 +1629,7 @@ html[data-theme='light'] .dialog-footer { background: rgba(28, 34, 56, 0.03); }
   .nav-inner { padding: 8px 12px; gap: 8px; }
   .brand-copy { display: none; }
   .brand-mark { width: 30px; height: 30px; }
+  .hr-since-rest { display: none; }
   .theme-toggle { padding: 6px 8px; }
   .theme-toggle span:last-child { display: none; }
   .nav-links { flex: 1; justify-content: center; gap: 1px; }

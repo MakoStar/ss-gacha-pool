@@ -203,10 +203,10 @@ function init(): void {
   })
   window.setInterval(() => {
     updateLiveState()
-    updateSinceCounters()
     regroupCards()
     applyFilters()
   }, 60000)
+  window.setInterval(updateSinceCounters, 1000)
 }
 
 /** 绑定搜索清除按钮 */

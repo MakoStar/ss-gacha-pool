@@ -53,13 +53,27 @@ function daysSince(date: string): number | null {
   return Number.isFinite(stamp) ? Math.max(0, Math.round((Date.now() - stamp) / 86400000)) : null
 }
 
-/** 刷新复刻等待天数 构建期写入的数值会随日期过期 */
+/** 距今的天 时 分 秒 */
+function elapsedLabel(date: string): { days: number, rest: string } | null {
+  const stamp = Date.parse(date)
+  if (!Number.isFinite(stamp)) return null
+  const diff = Math.max(0, Date.now() - stamp)
+  const days = Math.floor(diff / 86400000)
+  const hours = Math.floor((diff % 86400000) / 3600000)
+  const minutes = Math.floor((diff % 3600000) / 60000)
+  const seconds = Math.floor((diff % 60000) / 1000)
+  return { days, rest: `${hours} 小时 ${minutes} 分 ${seconds} 秒` }
+}
+
+/** 刷新复刻等待时间 构建期写入的数值会随日期过期 */
 export function updateSinceCounters(): void {
   for (const node of document.querySelectorAll<HTMLElement>('[data-since-date]')) {
-    const days = daysSince(node.dataset.sinceDate ?? '')
-    if (days === null) continue
+    const date = node.dataset.sinceDate ?? ''
+    const elapsed = elapsedLabel(date)
+    const days = daysSince(date)
+    if (elapsed === null || days === null) continue
     const label = node.dataset.sinceKind === 'rerun' ? '距上次复刻' : '尚未复刻 · 距首次登场'
-    node.textContent = `${label} ${days} 天`
+    node.innerHTML = `${label} ${elapsed.days} 天<span class="hr-since-rest"> ${elapsed.rest}</span>`
     const bar = node.closest('.hr-main')?.querySelector<HTMLElement>('[data-since-bar]')
     if (bar) bar.style.width = `${Math.min(100, (days / 400) * 100)}%`
   }
