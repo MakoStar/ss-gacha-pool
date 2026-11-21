@@ -50,7 +50,7 @@ export function updateLiveState(): void {
 /** 距今天数 */
 function daysSince(date: string): number | null {
   const stamp = Date.parse(date)
-  return Number.isFinite(stamp) ? Math.max(0, Math.round((Date.now() - stamp) / 86400000)) : null
+  return Number.isFinite(stamp) ? Math.max(0, Math.floor((Date.now() - stamp) / 86400000)) : null
 }
 
 /** 距今的天 时 分 秒 */

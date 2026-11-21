@@ -13,11 +13,13 @@ interface Props {
   first: string
   last: string
   ongoing: boolean
+  /** 最近一次卡池的结束时间 用于计算等待时长 */
+  sinceDate: string
   sinceLast: number
   bannerFile: string | null
 }
 
-const { entryIndex, main, partner, count, first, last, ongoing, sinceLast, bannerFile } = Astro.props
+const { entryIndex, main, partner, count, first, last, ongoing, sinceDate, sinceLast, bannerFile } = Astro.props
 const mainName = localized(main.i18n?.name, 'CN') || main.name
 const partnerName = partner ? localized(partner.i18n?.name, 'CN') || partner.name : ''
 const mainCard = goodsCardHtml(main, { lang: 'CN' })
@@ -59,7 +61,7 @@ const statusText = ongoing
       <span>最近登场 {formatDate(last)}</span>
       <span
         class="hr-status"
-        data-since-date={ongoing ? undefined : last}
+        data-since-date={ongoing ? undefined : sinceDate}
         data-since-kind={count > 1 ? 'rerun' : 'first'}
       >{statusText}</span>
     </span>

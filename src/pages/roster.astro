@@ -135,6 +135,7 @@ interface RowData {
   first: string
   last: string
   ongoing: boolean
+  sinceDate: string
   sinceLast: number
   bannerFile: string | null
 }
@@ -158,6 +159,7 @@ const suiteRows = suites.map((suite, index) => ({
   first: suite.appearances[0].date,
   last: suite.appearances[suite.appearances.length - 1].date,
   ongoing: suite.ongoing,
+  sinceDate: suite.sinceDate,
   sinceLast: suite.sinceLast,
   bannerFile: suite.appearances[suite.appearances.length - 1].banner.assets.display
 }))
@@ -177,6 +179,7 @@ const fourRows = (kind: 'traveler' | 'weapon'): RowData[] => {
       first: record.first,
       last: record.last,
       ongoing: isLive(lastBanner.endTime),
+      sinceDate: record.sinceDate,
       sinceLast: record.sinceLast,
       bannerFile: lastBanner.assets.display
     }
@@ -199,7 +202,7 @@ const panels: PanelData[] = [
 ]
 
 const oldest = [...suites].sort((a, b) => b.sinceLast - a.sinceLast)[0]
-const oldestDate = oldest ? oldest.appearances[oldest.appearances.length - 1].date : undefined
+const oldestDate = oldest?.sinceDate
 const oldestName = oldest
   ? `${localized(oldest.trekker.i18n?.name, 'CN') || oldest.trekker.name} × ${localized(oldest.disc.i18n?.name, 'CN') || oldest.disc.name}`
   : ''
@@ -245,6 +248,7 @@ const oldestName = oldest
               first={row.first}
               last={row.last}
               ongoing={row.ongoing}
+              sinceDate={row.sinceDate}
               sinceLast={row.sinceLast}
               bannerFile={row.bannerFile}
             />

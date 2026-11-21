@@ -127,11 +127,22 @@ function windowIndex(): Map<string, BannerEntry[]> {
   return map
 }
 
+/** 卡池结束时间 缺失时回退开始时间 */
+function endOf(banner: BannerEntry): string {
+  return banner.endTime ?? banner.startTime ?? ''
+}
+
+/** 距结束日期的天数 未来结束的卡池按 0 计 */
+function daysSinceEnd(now: number, end: string): number {
+  return Math.max(0, Math.floor((now - Date.parse(end)) / 86400000))
+}
+
 export interface SuitePair {
   trekker: GoodsEntry
   disc: GoodsEntry
   appearances: { date: string, banner: BannerEntry, partner: BannerEntry }[]
   ongoing: boolean
+  sinceDate: string
   sinceLast: number
 }
 
@@ -162,6 +173,7 @@ export function buildSuites(): { suites: SuitePair[], total: number, recurring: 
       disc: { ...goods, id: -goods.id, name: '', kind: 'disc' } as GoodsEntry,
       appearances,
       ongoing: false,
+      sinceDate: '',
       sinceLast: 0
     }
   })
@@ -173,7 +185,8 @@ export function buildSuites(): { suites: SuitePair[], total: number, recurring: 
     if (discFive) suite.disc = discFive
     const last = suite.appearances[suite.appearances.length - 1]
     suite.ongoing = getBannerStatus(last.banner, new Date()) === 'ongoing'
-    suite.sinceLast = Math.round((now - Date.parse(last.date)) / 86400000)
+    suite.sinceDate = endOf(last.banner)
+    suite.sinceLast = daysSinceEnd(now, suite.sinceDate)
   }
   suites.sort((a, b) => {
     if (a.ongoing !== b.ongoing) return a.ongoing ? -1 : 1
@@ -183,7 +196,7 @@ export function buildSuites(): { suites: SuitePair[], total: number, recurring: 
   const recurring = suites.filter((suite) => suite.appearances.length > 1)
   const gaps = recurring.flatMap((suite) => suite.appearances.slice(1).map((node, index) => (Date.parse(node.date) - Date.parse(suite.appearances[index].date)) / 86400000))
   const avgGap = gaps.length > 0 ? Math.round(gaps.reduce((sum, value) => sum + value, 0) / gaps.length) : 0
-  const minSince = suites.length > 0 ? Math.min(...suites.map((suite) => Math.round((now - Date.parse(suite.appearances[suite.appearances.length - 1].date)) / 86400000))) : 0
+  const minSince = suites.length > 0 ? Math.min(...suites.map((suite) => suite.sinceLast)) : 0
   return { suites, total: suites.length, recurring: recurring.length, avgGap, minSince }
 }
 
@@ -193,6 +206,7 @@ export interface StarRecord {
   count: number
   first: string
   last: string
+  sinceDate: string
   sinceLast: number
 }
 
@@ -211,13 +225,16 @@ export function buildFourStars(): { trekkers: StarRecord[], discs: StarRecord[] 
     const now = Date.now()
     return [...byGoods.values()].map(({ goods, banners }) => {
       const sorted = [...banners].sort((a, b) => Date.parse(a.startTime as string) - Date.parse(b.startTime as string))
+      const lastBanner = sorted[sorted.length - 1]
+      const sinceDate = endOf(lastBanner)
       return {
         goods,
         banners: sorted,
         count: sorted.length,
         first: sorted[0].startTime as string,
-        last: sorted[sorted.length - 1].startTime as string,
-        sinceLast: Math.round((now - Date.parse(sorted[sorted.length - 1].startTime as string)) / 86400000)
+        last: lastBanner.startTime as string,
+        sinceDate,
+        sinceLast: daysSinceEnd(now, sinceDate)
       }
     }).sort((a, b) => b.sinceLast - a.sinceLast)
   }
