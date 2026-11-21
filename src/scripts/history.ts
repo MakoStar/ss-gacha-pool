@@ -59,9 +59,15 @@ function historyAvatar(goods: HistoryGoods): string {
   return `<span class="ht-avatar">${goodsCardHtml(entry, { lang: 'CN', eager: true })}</span>`
 }
 
+/** 日期 带年份 2025/12/23 */
+function formatDay(value: string): string {
+  return value ? value.slice(0, 10).replaceAll('-', '/') : ''
+}
+
 /** 渲染时间树节点 */
 function renderNode(node: HistoryNode, index: number, total: number): string {
   const gap = node.gap !== null ? `<em>间隔 ${node.gap} 天</em>` : '<em>首次 UP</em>'
+  const end = node.end ? formatDay(node.end) : '至今'
   const mates = node.mates.length > 0
     ? `<div class="ht-mates"><span class="ht-mates-label">同期陪跑</span>${node.mates.map((mate) => `<span class="ht-mate">${historyAvatar(mate)}<i>${escapeHtml(mate.name)}</i></span>`).join('')}</div>`
     : ''
@@ -71,7 +77,7 @@ function renderNode(node: HistoryNode, index: number, total: number): string {
     : ''
   return `<li class="ht-node${index === total - 1 ? ' is-last' : ''}">
     <span class="ht-dot"></span>
-    <div class="ht-date">${node.start.slice(5, 10).replace('-', '/')} – ${node.end.slice(5, 10).replace('-', '/')} ${gap}</div>
+    <div class="ht-date">${formatDay(node.start)} – ${end} ${gap}</div>
     <div class="ht-body">
       ${historyBanner(node.bannerFile)}
       <div class="ht-item">
