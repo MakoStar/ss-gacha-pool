@@ -71,6 +71,9 @@ const type = lead ? (localized(lead.i18n?.type, lang) || lead.type) : ''
           data-img-chain={heroChain || undefined}
           alt={`${name} banner`}
           data-fallback-name={name}
+          width="1280"
+          height="720"
+          loading="eager"
           fetchpriority="high"
           decoding="async"
         />

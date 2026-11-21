@@ -10,9 +10,10 @@ interface Props {
   title: string
   active: 'home' | 'timeline' | 'roster' | 'standard' | 'roster'
   description?: string
+  preloadImage?: string | null
 }
 
-const { title, active, description = 'Stella Sora 卡池档案' } = Astro.props
+const { title, active, description = 'Stella Sora 卡池档案', preloadImage = null } = Astro.props
 const siteName = 'Stella Sora Gacha Pool Archive'
 const base = import.meta.env.BASE_URL
 const siteUrl = import.meta.env.SITE
@@ -60,6 +61,7 @@ const jsonLd = {
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://api.ennead.cc" crossorigin />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:locale" content="zh_CN" />

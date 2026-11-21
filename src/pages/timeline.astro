@@ -3,9 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import PeriodCard from '../components/banner/PeriodCard.astro'
 import DateJump from '../components/controls/DateJump.astro'
 import { buildPeriods } from '../lib/data'
+import { bannerChain } from '../lib/assets'
 
 const { periods, total, ongoing, avgDays } = buildPeriods()
 const years = [...new Set(periods.map((period) => period.start.slice(0, 4)))]
+const firstBanner = periods[0]?.pools[0]?.banner
+const heroArt = firstBanner ? bannerChain(firstBanner.assets.display, 'CN') : null
 
 const monthKey = (period: { start: string }) => period.start.slice(0, 7)
 const monthLabel = (key: string) => `${Number(key.slice(5))} 月`
@@ -20,7 +23,7 @@ for (const period of periods) {
 const monthKeys = [...monthMap.keys()]
 ---
 
-<BaseLayout title="卡池时间线" active="timeline" description="Stella Sora 卡池时间线，同期旅人池与秘纹池成组展示">
+<BaseLayout title="卡池时间线" active="timeline" description="Stella Sora 卡池时间线，同期旅人池与秘纹池成组展示" preloadImage={heroArt?.src}>
   <section class="page-head">
     <h1>卡池时间线</h1>
     <p>同期开启的旅人池与秘纹池归为一期 · 共 {total} 期</p>

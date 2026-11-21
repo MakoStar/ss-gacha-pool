@@ -3,13 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import FeaturedBanner from '../components/banner/FeaturedBanner.astro'
 import ArchiveSection from '../components/controls/ArchiveSection.astro'
 import { archiveGroups, currentPools, featuredBanner, filterItems, gacha } from '../lib/data'
+import { bannerChain } from '../lib/assets'
 
 const featured = featuredBanner()
 const pools = currentPools().filter((pool) => pool.id !== featured.id)
 const groups = archiveGroups()
+const heroArt = bannerChain(featured.assets.display, 'CN')
 ---
 
-<BaseLayout title="卡池一览" active="home" description="Stella Sora 卡池周期、UP 货物与概率档案">
+<BaseLayout title="卡池一览" active="home" description="Stella Sora 卡池周期、UP 货物与概率档案" preloadImage={heroArt?.src}>
   <FeaturedBanner banners={[featured, ...pools]} />
   <ArchiveSection groups={groups} filters={filterItems} totalCount={gacha.banners.length} />
 </BaseLayout>
