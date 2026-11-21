@@ -5,7 +5,7 @@ import {
 } from './state'
 import { applyTheme, switchTheme } from './theme'
 import { applyRegionImages, bindImageFallbacks } from './images'
-import { applyFilters, regroupCards, updateLiveState } from './cards'
+import { applyFilters, regroupCards, updateLiveState, updateSinceCounters } from './cards'
 import { refreshDialog } from './dialog'
 import { closeHistoryDialog, openHistoryDialog } from './history'
 import { closeRateDialog, openRateDialog } from './dialog'
@@ -34,6 +34,7 @@ function applyLanguage(): void {
   })
 
   updateLiveState()
+  updateSinceCounters()
   regroupCards()
   applyTheme()
   applyRegionImages()
@@ -202,6 +203,7 @@ function init(): void {
   })
   window.setInterval(() => {
     updateLiveState()
+    updateSinceCounters()
     regroupCards()
     applyFilters()
   }, 60000)

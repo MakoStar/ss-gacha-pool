@@ -47,6 +47,28 @@ export function updateLiveState(): void {
   }
 }
 
+/** 距今天数 */
+function daysSince(date: string): number | null {
+  const stamp = Date.parse(date)
+  return Number.isFinite(stamp) ? Math.max(0, Math.round((Date.now() - stamp) / 86400000)) : null
+}
+
+/** 刷新复刻等待天数 构建期写入的数值会随日期过期 */
+export function updateSinceCounters(): void {
+  for (const node of document.querySelectorAll<HTMLElement>('[data-since-date]')) {
+    const days = daysSince(node.dataset.sinceDate ?? '')
+    if (days === null) continue
+    const label = node.dataset.sinceKind === 'rerun' ? '距上次复刻' : '尚未复刻 · 距首次登场'
+    node.textContent = `${label} ${days} 天`
+    const bar = node.closest('.hr-main')?.querySelector<HTMLElement>('[data-since-bar]')
+    if (bar) bar.style.width = `${Math.min(100, (days / 400) * 100)}%`
+  }
+  for (const node of document.querySelectorAll<HTMLElement>('[data-since-days]')) {
+    const days = daysSince(node.dataset.sinceDays ?? '')
+    if (days !== null) node.textContent = `${days} 天`
+  }
+}
+
 /** 类型筛选条件 */
 function matchesFilter(card: HTMLElement, filter: string): boolean {
   if (filter === 'all') return true

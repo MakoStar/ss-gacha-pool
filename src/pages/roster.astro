@@ -199,6 +199,7 @@ const panels: PanelData[] = [
 ]
 
 const oldest = [...suites].sort((a, b) => b.sinceLast - a.sinceLast)[0]
+const oldestDate = oldest ? oldest.appearances[oldest.appearances.length - 1].date : undefined
 const oldestName = oldest
   ? `${localized(oldest.trekker.i18n?.name, 'CN') || oldest.trekker.name} × ${localized(oldest.disc.i18n?.name, 'CN') || oldest.disc.name}`
   : ''
@@ -209,7 +210,7 @@ const oldestName = oldest
     <h1>复刻表</h1>
     <p>
       {suites.length} 套 5★ 角色与专武 · 已复刻 {recurring} 套 · 平均间隔 {avgGap} 天 ·
-      最久未复刻：{oldestName}（{oldest?.sinceLast} 天）
+      最久未复刻：{oldestName}（<span data-since-days={oldestDate}>{oldest?.sinceLast} 天</span>）
     </p>
   </section>
 

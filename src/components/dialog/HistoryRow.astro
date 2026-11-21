@@ -57,10 +57,14 @@ const statusText = ongoing
     <span class="hr-line2">
       <span>首次 UP {formatDate(first)}</span>
       <span>最近登场 {formatDate(last)}</span>
-      <span class="hr-status">{statusText}</span>
+      <span
+        class="hr-status"
+        data-since-date={ongoing ? undefined : last}
+        data-since-kind={count > 1 ? 'rerun' : 'first'}
+      >{statusText}</span>
     </span>
     <span class="hr-bar" aria-hidden="true">
-      <span class={`hr-bar-fill${ongoing ? ' is-live' : ''}`} style={`width:${Math.min(100, (sinceLast / 400) * 100)}%`}></span>
+      <span class={`hr-bar-fill${ongoing ? ' is-live' : ''}`} data-since-bar style={`width:${Math.min(100, (sinceLast / 400) * 100)}%`}></span>
     </span>
   </span>
 
