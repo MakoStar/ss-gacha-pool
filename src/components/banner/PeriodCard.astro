@@ -1,0 +1,66 @@
+---
+import type { TimelinePeriod } from '../../lib/data'
+import { bannerChain } from '../../lib/assets'
+import { bannerProgress, formatDate, statusText } from '../../lib/date'
+import { localized } from '../../lib/i18n'
+import GoodsAvatar from '../goods/GoodsAvatar.astro'
+
+interface Props {
+  period: TimelinePeriod
+}
+
+const { period } = Astro.props
+
+const hasExtra = period.pools.some((pool) => pool.banner.poolKind === 'mixed')
+const cols = hasExtra ? 2 : period.pools.length === 3 ? 3 : period.pools.length === 2 ? 2 : 1
+const statusLabel = statusText(period.status, 'CN')
+const progress = bannerProgress(period.pools[0].banner)
+const startShort = formatDate(period.start)
+const endShort = formatDate(period.end)
+---
+
+<article class={`period-card pc-cols-${cols}`} data-period-start={period.start} data-period-end={period.end}>
+  <header class="pc-head">
+    <span class="pc-date">{startShort} – {endShort}</span>
+    <span class="pc-days">{period.days} 天</span>
+    <span class="status-pill" data-status-text={period.status}>{statusLabel}</span>
+  </header>
+  <div class="pc-progress" data-status={period.status} aria-hidden="true">
+    <span class="pc-progress-fill" style={`width:${progress}%`}></span>
+  </div>
+
+  <div class="pc-pools">
+    {period.pools.map((pool) => {
+      const banner = pool.banner
+      const extra = banner.poolKind === 'mixed'
+      const name = localized(banner.i18n?.name, 'CN') || banner.name
+      const cover = bannerChain(banner.assets.display, 'CN')
+      const chain = cover && cover.chain.length > 0 ? encodeURIComponent(JSON.stringify(cover.chain)) : ''
+      return (
+        <button class={`pc-pool${extra ? ' is-extra' : ''}`} type="button" data-action="details" data-banner-id={banner.id} title={name}>
+          <span class="pc-thumb">
+            {cover ? (
+              <img
+                src={cover.src}
+                data-banner-file={banner.assets.display ?? ''}
+                data-img-chain={chain || undefined}
+                data-fallback-name={name}
+                alt={name}
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              <span class="is-missing" role="img" aria-label={name}></span>
+            )}
+          </span>
+          <span class="pc-main">
+            <span class="pc-name">{name}</span>
+            <span class="pc-ups">
+              {pool.up.map((goods) => <GoodsAvatar goods={goods} />)}
+            </span>
+          </span>
+        </button>
+      )
+    })}
+  </div>
+</article>

@@ -1,0 +1,105 @@
+---
+import '../styles/global.css'
+import SiteNav from '../components/layout/SiteNav.astro'
+import SiteFooter from '../components/layout/SiteFooter.astro'
+import BackToTop from '../components/layout/BackToTop.astro'
+import RateDialog from '../components/dialog/RateDialog.astro'
+import { gacha, lang } from '../lib/data'
+
+interface Props {
+  title: string
+  active: 'home' | 'timeline' | 'roster' | 'standard' | 'roster'
+  description?: string
+}
+
+const { title, active, description = 'Stella Sora 卡池档案' } = Astro.props
+const siteName = 'Stella Sora Gacha Pool Archive'
+const base = import.meta.env.BASE_URL
+const siteUrl = import.meta.env.SITE
+const canonical = new URL(Astro.url.pathname, siteUrl).href
+const ogImage = new URL(`${base}og.png`, siteUrl).href
+const homeUrl = new URL(base, siteUrl).href
+const breadcrumb = active === 'home'
+  ? null
+  : [
+    { '@type': 'ListItem', position: 1, name: '卡池一览', item: homeUrl },
+    { '@type': 'ListItem', position: 2, name: title, item: canonical }
+  ]
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${homeUrl}#website`,
+      name: siteName,
+      alternateName: 'Stella Sora 卡池档案',
+      url: homeUrl,
+      description,
+      inLanguage: 'zh-CN'
+    },
+    ...(breadcrumb
+      ? [{ '@type': 'BreadcrumbList', itemListElement: breadcrumb }]
+      : [])
+  ]
+}
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang={lang} data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="theme-color" content="#0b0f1a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f3f4fb" media="(prefers-color-scheme: light)" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/x-icon" href={`${base}favicon.ico`} />
+    <link rel="sitemap" type="application/xml" href={`${base}sitemap-index.xml`} />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://api.ennead.cc" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content={`${title} | ${siteName}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${siteName} · ${title}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | ${siteName}`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <title>{title} | {siteName}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script is:inline>
+      (function () {
+        try {
+          var theme = localStorage.getItem('ss-gacha-pool-theme');
+          document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+        } catch (error) {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <SiteNav active={active} />
+
+    <main class="page-shell">
+      <slot />
+    </main>
+
+    <SiteFooter updated={gacha.generatedAt} />
+    <BackToTop />
+    <RateDialog lang={lang} />
+
+    <script>
+      import '../scripts/main.ts'
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+---
+import type { BannerEntry } from '../../lib/types'
+import { bannerChain } from '../../lib/assets'
+import { formatPeriod, formatRelative, getBannerStatus, statusText } from '../../lib/date'
+import { localized, type Lang } from '../../lib/i18n'
+import TypeBadge from '../goods/TypeBadge.astro'
+import GoodsIcon from '../goods/GoodsIcon.astro'
+
+interface Props {
+  banner: BannerEntry
+  lang?: Lang
+}
+
+const { banner, lang = 'CN' } = Astro.props
+const status = getBannerStatus(banner)
+const cover = bannerChain(banner.assets.display, lang)
+const coverChain = cover && cover.chain.length > 0 ? encodeURIComponent(JSON.stringify(cover.chain)) : ''
+const name = localized(banner.i18n?.name, lang) || banner.name
+const typeLabel = localized(banner.i18n?.type, lang) || banner.type
+const featuredGoods = banner.goods.filter((goods) => goods.featured).slice(0, 3)
+const displayGoods = featuredGoods.length > 0 ? featuredGoods : banner.goods.slice(0, 3)
+const relative = formatRelative(banner, new Date(), lang)
+
+/** 搜索范围包含各语言名称 卡池编号 类型与货物名 */
+const searchText = [
+  String(banner.id),
+  ...Object.values(banner.i18n?.name ?? {}),
+  ...Object.values(banner.i18n?.type ?? {}),
+  ...banner.goods.flatMap((goods) => [goods.name, ...Object.values(goods.i18n?.name ?? {})])
+].filter(Boolean).join(' ').toLowerCase()
+---
+
+<article
+  class={`banner-card glass-panel category-${banner.category}`}
+  data-banner-card
+  data-banner-id={banner.id}
+  data-bucket={banner.bucket}
+  data-status={status}
+  data-category={banner.category}
+  data-badges={banner.badges.join(',')}
+  data-kind={banner.poolKind}
+  data-start={banner.startTime ?? ''}
+  data-end={banner.endTime ?? ''}
+  data-permanent={banner.permanent ? 'true' : 'false'}
+  data-search={searchText}
+>
+  <button class="card-cover" type="button" data-action="details" data-banner-id={banner.id} aria-label={name}>
+    {cover ? (
+      <img
+        src={cover.src}
+        data-banner-file={banner.assets.display ?? ''}
+        data-img-chain={coverChain || undefined}
+        alt={`${name} banner`}
+        data-fallback-name={name}
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <span class="cover-fallback is-missing" role="img" aria-label={name}></span>
+    )}
+    <span class="cover-meta">
+      <span class="cover-id">#{banner.id}</span>
+    </span>
+  </button>
+
+  <div class="card-body">
+    <div class="card-badges">
+      <span class="status-pill" data-status-pill data-status-text={status}>{statusText(status, lang)}</span>
+      {banner.badges.map((badge) => <TypeBadge kind={badge} lang={lang} small />)}
+    </div>
+    <h3 class="card-title">
+      <button type="button" data-action="details" data-banner-id={banner.id} data-banner-name data-localized-name={JSON.stringify(banner.i18n?.name ?? {})}>
+        {name}
+      </button>
+    </h3>
+    <p class="card-type" data-banner-type data-localized-name={JSON.stringify(banner.i18n?.type ?? {})}>{typeLabel}</p>
+    <div class="card-meta">
+      <span class="card-period" data-period>{formatPeriod(banner, lang)}</span>
+      <span class="card-left" data-relative>{relative}</span>
+    </div>
+  </div>
+
+  {displayGoods.length > 0 && (
+    <div class="card-goods">
+      {displayGoods.map((goods) => (
+        <GoodsIcon goods={goods} bannerId={banner.id} lang={lang} size="xs" showName={false} />
+      ))}
+    </div>
+  )}
+</article>

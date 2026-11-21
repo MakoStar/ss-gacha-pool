@@ -1,0 +1,28 @@
+---
+import { t, type Lang } from '../../lib/i18n'
+
+export interface FilterItem {
+  key: string
+  i18n: string
+}
+
+interface Props {
+  filters: FilterItem[]
+  lang?: Lang
+}
+
+const { filters, lang = 'CN' } = Astro.props
+---
+
+<div class="filters" role="group" aria-label="Filter banners">
+  {filters.map((filter) => (
+    <button
+      type="button"
+      class={`filter-button${filter.key === 'all' ? ' is-active' : ''}`}
+      data-filter={filter.key}
+      data-i18n={filter.i18n}
+    >
+      {t(lang, filter.i18n)}
+    </button>
+  ))}
+</div>

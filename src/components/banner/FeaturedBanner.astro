@@ -1,0 +1,95 @@
+---
+import type { BannerEntry } from '../../lib/types'
+import { bannerChain } from '../../lib/assets'
+import { bannerProgress, formatPeriod, formatRelative, getBannerStatus, statusText } from '../../lib/date'
+import { localized, t, type Lang } from '../../lib/i18n'
+import TypeBadge from '../goods/TypeBadge.astro'
+import BannerCard from './BannerCard.astro'
+
+interface Props {
+  banners: BannerEntry[]
+  lang?: Lang
+}
+
+const { banners, lang = 'CN' } = Astro.props
+const [lead] = banners
+const status = lead ? getBannerStatus(lead) : 'permanent'
+const progress = lead ? bannerProgress(lead) : 0
+const heroArt = lead ? bannerChain(lead.assets.display, lang) : null
+const heroChain = heroArt && heroArt.chain.length > 0 ? encodeURIComponent(JSON.stringify(heroArt.chain)) : ''
+const name = lead ? (localized(lead.i18n?.name, lang) || lead.name) : ''
+const type = lead ? (localized(lead.i18n?.type, lang) || lead.type) : ''
+---
+
+{lead && (
+  <section
+    class="hero glass-panel"
+    data-banner-card
+    data-banner-id={lead.id}
+    data-bucket={lead.bucket}
+    data-status={status}
+    data-start={lead.startTime ?? ''}
+    data-end={lead.endTime ?? ''}
+    data-permanent={lead.permanent ? 'true' : 'false'}
+  >
+    <div class="hero-copy">
+      <div class="hero-eyebrow">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span data-i18n="hero.eyebrow">{t(lang, 'hero.eyebrow')}</span>
+        <span class="hero-id">#{lead.id}</span>
+      </div>
+
+      <h1 data-banner-name data-localized-name={JSON.stringify(lead.i18n?.name ?? {})}>{name}</h1>
+      <p class="hero-type" data-banner-type data-localized-name={JSON.stringify(lead.i18n?.type ?? {})}>{type}</p>
+
+      <div class="hero-badges">
+        <span class="status-pill" data-status-pill data-status-text={status}>{statusText(status, lang)}</span>
+        {lead.badges.map((badge) => <TypeBadge kind={badge} lang={lang} small />)}
+      </div>
+
+      <div class="hero-period">
+        <span class="period-label" data-i18n="hero.period">{t(lang, 'hero.period')}</span>
+        <span class="period-value" data-period>{formatPeriod(lead, lang)}</span>
+        <span class="period-relative" data-relative>{formatRelative(lead, new Date(), lang)}</span>
+      </div>
+
+      <div class="hero-actions">
+        <button type="button" class="primary-button" data-action="details" data-banner-id={lead.id} data-i18n="hero.viewGoods">
+          {t(lang, 'hero.viewGoods')}
+        </button>
+        <span class="hero-progress" aria-hidden="true">
+          <span class="progress-fill" data-progress style={`width: ${progress}%`}></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      {heroArt ? (
+        <img
+          src={heroArt.src}
+          data-banner-file={lead.assets.display ?? ''}
+          data-img-chain={heroChain || undefined}
+          alt={`${name} banner`}
+          data-fallback-name={name}
+          fetchpriority="high"
+          decoding="async"
+        />
+      ) : (
+        <div class="hero-art-fallback is-missing" role="img" aria-label={name}></div>
+      )}
+    </div>
+  </section>
+)}
+
+<section class="current-section" aria-labelledby="current-title">
+  <div class="section-head">
+    <div class="section-head-main">
+      <span class="group-marker marker-ongoing" aria-hidden="true"></span>
+      <h2 id="current-title" data-i18n="current.title">{t(lang, 'current.title')}</h2>
+      <span class="pill-count">{banners.length}</span>
+    </div>
+  </div>
+  <div class="current-grid">
+    {banners.map((banner) => <BannerCard banner={banner} lang={lang} />)}
+  </div>
+</section>

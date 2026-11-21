@@ -1,0 +1,43 @@
+---
+interface Props {
+  active: 'home' | 'timeline' | 'roster' | 'standard'
+}
+
+const { active } = Astro.props
+const base = import.meta.env.BASE_URL
+const links = [
+  { key: 'home', href: base, label: '卡池' },
+  { key: 'timeline', href: `${base}timeline/`, label: '时间线' },
+  { key: 'roster', href: `${base}roster/`, label: '复刻表' },
+  { key: 'standard', href: `${base}standard/`, label: '常驻池' },
+]
+---
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href={base}>
+      <img class="brand-mark" src={`${base}favicon.ico`} alt="" width="32" height="32" />
+      <span class="brand-copy">
+        <strong>Stella Sora</strong>
+        <small>Gacha Pool Archive</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="主导航">
+      {links.map((link) => (
+        <a
+          class:list={['nav-link', { 'is-active': link.key === active }]}
+          href={link.href}
+          aria-current={link.key === active ? 'page' : undefined}
+        >{link.label}</a>
+      ))}
+    </nav>
+
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" data-theme-toggle title="切换日夜主题">
+        <span class="theme-icon" data-theme-icon aria-hidden="true">☾</span>
+        <span data-theme-label>夜间</span>
+      </button>
+    </div>
+  </div>
+</header>

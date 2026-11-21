@@ -1,0 +1,35 @@
+---
+interface Props {
+  updated: string
+}
+
+const { updated } = Astro.props
+const buildTime = new Date(updated)
+const stamp = `${buildTime.getFullYear()}-${String(buildTime.getMonth() + 1).padStart(2, '0')}-${String(buildTime.getDate()).padStart(2, '0')}`
+const repo = 'https://github.com/MakoStar/ss-gacha-pool'
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-dot" aria-hidden="true"></span>
+      <span>Stella Sora Gacha Pool Archive</span>
+    </div>
+    <p class="footer-text">一个 StellaSora 卡池货物和时间线的记录网页，自动同步更新。</p>
+    <p class="footer-text">
+      <span>构建于：</span>
+      <time datetime={updated}>{stamp}</time>
+    </p>
+    <div class="footer-links">
+      <a href={repo} target="_blank" rel="noopener noreferrer" class="footer-link">
+        <span aria-hidden="true">📦</span>
+        <span>本仓库源码</span>
+      </a>
+      <a href="https://stelladb.pages.dev" target="_blank" rel="noopener noreferrer" class="footer-link">
+        <span aria-hidden="true">⚡</span>
+        <span>stelladb</span>
+      </a>
+    </div>
+    <p class="footer-copy">仅供学习交流，版权归原游戏与数据提供方所有。</p>
+  </div>
+</footer>

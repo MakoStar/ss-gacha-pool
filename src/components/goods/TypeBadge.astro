@@ -1,0 +1,24 @@
+---
+import type { BadgeKind } from '../../lib/types'
+import { t, type Lang } from '../../lib/i18n'
+
+interface Props {
+  kind: BadgeKind
+  lang: Lang
+  small?: boolean
+}
+
+const { kind, lang, small = false } = Astro.props
+const icons: Record<BadgeKind, string> = {
+  limited: '✦',
+  rerun: '↻',
+  special: '★',
+  permanent: '∞',
+  standard: '◷'
+}
+---
+
+<span class:list={['type-badge', `badge-${kind}`, { 'badge-small': small }]} data-badge={kind} data-i18n={`badge.${kind}`}>
+  <span class="badge-icon" aria-hidden="true">{icons[kind]}</span>
+  <span class="badge-text">{t(lang, `badge.${kind}`)}</span>
+</span>

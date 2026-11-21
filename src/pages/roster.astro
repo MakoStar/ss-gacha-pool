@@ -1,0 +1,258 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import HistoryRow from '../components/dialog/HistoryRow.astro'
+import HistoryDialog from '../components/dialog/HistoryDialog.astro'
+import { buildSuites, buildFourStars } from '../lib/data'
+import type { GoodsEntry } from '../lib/types'
+import { localized } from '../lib/i18n'
+
+const { suites, recurring, avgGap } = buildSuites()
+const fourStars = buildFourStars()
+
+interface Brief {
+  name: string
+  icon: string | null
+  cnIcon: string | null
+  cnDir: 'head' | 'outfit' | null
+  kind: string
+  rarity: number
+  element: string | null
+}
+
+const brief = (goods: GoodsEntry): Brief => ({
+  name: localized(goods.i18n?.name, 'CN') || goods.name,
+  icon: goods.icon,
+  cnIcon: goods.cnIcon,
+  cnDir: goods.cnDir,
+  kind: goods.kind,
+  rarity: goods.rarity,
+  element: goods.element
+})
+
+interface HistoryNode {
+  start: string
+  end: string
+  gap: number | null
+  mainBannerId: number
+  partnerBannerId: number | null
+  mainBanner: string
+  partnerBanner: string | null
+  mates: Brief[]
+}
+
+interface HistoryEntry {
+  main: Brief
+  partner: Brief | null
+  count: number
+  avgGap: number | null
+  nodes: HistoryNode[]
+}
+
+const entries: HistoryEntry[] = []
+const suiteEntries: Array<{ travelerIndex: number, weaponIndex: number }> = []
+
+for (const suite of suites) {
+  const nodes = suite.appearances.map((node, index) => {
+    const prev = index > 0 ? suite.appearances[index - 1].date : null
+    const poolBanners = [node.banner, node.partner]
+    const mates = [...new Set(poolBanners
+      .flatMap((banner) => banner.goods.filter((goods) => goods.featured && goods.rarity === 4))
+      .map((goods) => JSON.stringify(brief(goods))))]
+      .map((item) => JSON.parse(item)) as Brief[]
+    return {
+      start: node.date,
+      end: node.banner.endTime ?? '',
+      gap: prev ? Math.round((Date.parse(node.date) - Date.parse(prev)) / 86400000) : null,
+      mainBannerId: node.banner.id,
+      partnerBannerId: node.partner?.id ?? null,
+      mainBanner: localized(node.banner.i18n?.name, 'CN') || node.banner.name,
+      partnerBanner: node.partner ? localized(node.partner.i18n?.name, 'CN') || node.partner.name : null,
+      bannerFile: node.banner.assets.display,
+      partnerBannerFile: node.partner?.assets.display ?? null,
+      mates
+    }
+  })
+  const avg = nodes.length > 1
+    ? Math.round((Date.parse(nodes[nodes.length - 1].start) - Date.parse(nodes[0].start)) / (nodes.length - 1) / 86400000)
+    : null
+  const base = entries.length
+  entries.push({ main: brief(suite.trekker), partner: brief(suite.disc), count: nodes.length, avgGap: avg, nodes })
+  entries.push({
+    main: brief(suite.disc),
+    partner: brief(suite.trekker),
+    count: nodes.length,
+    avgGap: avg,
+    nodes: nodes.map((node) => ({
+      start: node.start,
+      end: node.end,
+      gap: node.gap,
+      mainBannerId: node.partnerBannerId ?? node.mainBannerId,
+      partnerBannerId: node.mainBannerId,
+      mainBanner: node.partnerBanner ?? node.mainBanner,
+      partnerBanner: node.mainBanner,
+      bannerFile: node.partnerBannerFile ?? node.bannerFile,
+      partnerBannerFile: node.bannerFile,
+      mates: node.mates
+    }))
+  })
+  suiteEntries.push({ travelerIndex: base, weaponIndex: base + 1 })
+}
+
+const fourEntries: Record<'traveler' | 'weapon', number[]> = { traveler: [], weapon: [] }
+for (const [kind, list] of [['traveler', fourStars.trekkers], ['weapon', fourStars.discs]] as const) {
+  for (const record of list) {
+    const nodes = record.banners.map((banner, index) => {
+      const prev = index > 0 ? record.banners[index - 1].startTime : null
+      return {
+        start: banner.startTime as string,
+        end: banner.endTime ?? '',
+        gap: prev ? Math.round((Date.parse(banner.startTime as string) - Date.parse(prev)) / 86400000) : null,
+        mainBannerId: banner.id,
+        partnerBannerId: null,
+        mainBanner: localized(banner.i18n?.name, 'CN') || banner.name,
+        partnerBanner: null,
+        bannerFile: banner.assets.display,
+        partnerBannerFile: null,
+        mates: banner.goods.filter((goods) => goods.featured && goods.id !== record.goods.id).map(brief)
+      }
+    })
+    fourEntries[kind].push(entries.length)
+    entries.push({
+      main: brief(record.goods),
+      partner: null,
+      count: nodes.length,
+      avgGap: null,
+      nodes
+    })
+  }
+}
+
+interface RowData {
+  entryIndex: number
+  main: GoodsEntry
+  partner: GoodsEntry | null
+  count: number
+  first: string
+  last: string
+  ongoing: boolean
+  sinceLast: number
+  bannerFile: string | null
+}
+
+interface RowGroup {
+  title: string
+  rows: RowData[]
+}
+
+interface PanelData {
+  key: string
+  label: string
+  groups: RowGroup[]
+}
+
+const suiteRows = suites.map((suite, index) => ({
+  entryIndex: suiteEntries[index].travelerIndex,
+  main: suite.trekker,
+  partner: suite.disc,
+  count: suite.appearances.length,
+  first: suite.appearances[0].date,
+  last: suite.appearances[suite.appearances.length - 1].date,
+  ongoing: suite.ongoing,
+  sinceLast: suite.sinceLast,
+  bannerFile: suite.appearances[suite.appearances.length - 1].banner.assets.display
+}))
+
+const isLive = (end: string | null) => end ? Date.parse(end) >= Date.now() : false
+
+const fourRows = (kind: 'traveler' | 'weapon'): RowData[] => {
+  const list = kind === 'traveler' ? fourStars.trekkers : fourStars.discs
+  const indexes = fourEntries[kind]
+  return list.map((record, index) => {
+    const lastBanner = record.banners[record.banners.length - 1]
+    return {
+      entryIndex: indexes[index],
+      main: record.goods,
+      partner: null,
+      count: record.count,
+      first: record.first,
+      last: record.last,
+      ongoing: isLive(lastBanner.endTime),
+      sinceLast: record.sinceLast,
+      bannerFile: lastBanner.assets.display
+    }
+  })
+}
+
+const splitGroups = (rows: RowData[]): RowGroup[] => {
+  const live = rows.filter((row) => row.ongoing)
+  const past = rows.filter((row) => !row.ongoing)
+  const groups: RowGroup[] = []
+  if (live.length > 0) groups.push({ title: '当前 UP', rows: live })
+  if (past.length > 0) groups.push({ title: '历史记录', rows: past })
+  return groups
+}
+
+const panels: PanelData[] = [
+  { key: 'suite', label: '5★ 套装', groups: splitGroups(suiteRows) },
+  { key: '4star-traveler', label: '4★ 旅人', groups: splitGroups(fourRows('traveler')) },
+  { key: '4star-weapon', label: '4★ 秘纹', groups: splitGroups(fourRows('weapon')) }
+]
+
+const oldest = [...suites].sort((a, b) => b.sinceLast - a.sinceLast)[0]
+const oldestName = oldest
+  ? `${localized(oldest.trekker.i18n?.name, 'CN') || oldest.trekker.name} × ${localized(oldest.disc.i18n?.name, 'CN') || oldest.disc.name}`
+  : ''
+---
+
+<BaseLayout title="复刻表" active="roster" description="Stella Sora 全部 UP 旅人与秘纹的复刻统计与登场时间线">
+  <section class="page-head">
+    <h1>复刻表</h1>
+    <p>
+      {suites.length} 套 5★ 角色与专武 · 已复刻 {recurring} 套 · 平均间隔 {avgGap} 天 ·
+      最久未复刻：{oldestName}（{oldest?.sinceLast} 天）
+    </p>
+  </section>
+
+  <div class="roster-tabs" role="tablist">
+    {panels.map((panel, index) => (
+      <button
+        type="button"
+        class={`roster-tab${index === 0 ? ' is-active' : ''}`}
+        data-roster-tab={panel.key}
+        role="tab"
+      >
+        {panel.label}
+        <span class="roster-tab-count">{panel.groups.reduce((sum, group) => sum + group.rows.length, 0)}</span>
+      </button>
+    ))}
+  </div>
+
+  {panels.map((panel, index) => (
+    <section class={`roster-panel${index === 0 ? ' is-active' : ''}`} data-roster-panel={panel.key}>
+      {panel.groups.map((group) => (
+        <div class="row-group">
+          <h3 class="row-group-title">
+            {group.title}
+            <span class="row-group-count">{group.rows.length}</span>
+          </h3>
+          {group.rows.map((row) => (
+            <HistoryRow
+              entryIndex={row.entryIndex}
+              main={row.main}
+              partner={row.partner}
+              count={row.count}
+              first={row.first}
+              last={row.last}
+              ongoing={row.ongoing}
+              sinceLast={row.sinceLast}
+              bannerFile={row.bannerFile}
+            />
+          ))}
+        </div>
+      ))}
+    </section>
+  ))}
+
+  <HistoryDialog />
+  <script type="application/json" id="history-payload" set:html={JSON.stringify(entries)} />
+</BaseLayout>

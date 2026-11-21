@@ -1,0 +1,26 @@
+---
+import type { BannerEntry } from '../../lib/types'
+import type { BannerStatus } from '../../lib/date'
+import { t, type Lang } from '../../lib/i18n'
+import BannerCard from '../banner/BannerCard.astro'
+
+interface Props {
+  status: BannerStatus
+  banners: BannerEntry[]
+  lang?: Lang
+}
+
+const { status, banners, lang = 'CN' } = Astro.props
+---
+
+<section class="archive-group" data-group={status}>
+  <div class="group-head">
+    <span class={`group-marker marker-${status}`} aria-hidden="true"></span>
+    <h3 data-i18n={`group.${status}`}>{t(lang, `group.${status}`)}</h3>
+    <span class="group-count" data-group-count>{banners.length}</span>
+  </div>
+  <div class="archive-grid" data-grid={status}>
+    {banners.map((banner) => <BannerCard banner={banner} lang={lang} />)}
+  </div>
+  <p class="group-empty" data-group-empty hidden data-i18n="group.empty">{t(lang, 'group.empty')}</p>
+</section>

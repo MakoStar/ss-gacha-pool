@@ -1,0 +1,82 @@
+---
+import type { GoodsEntry } from '../../lib/types'
+import { goodsCardHtml } from '../../lib/card'
+import { bannerChain } from '../../lib/assets'
+import { formatDate } from '../../lib/date'
+import { localized } from '../../lib/i18n'
+
+interface Props {
+  entryIndex: number
+  main: GoodsEntry
+  partner: GoodsEntry | null
+  count: number
+  first: string
+  last: string
+  ongoing: boolean
+  sinceLast: number
+  bannerFile: string | null
+}
+
+const { entryIndex, main, partner, count, first, last, ongoing, sinceLast, bannerFile } = Astro.props
+const mainName = localized(main.i18n?.name, 'CN') || main.name
+const partnerName = partner ? localized(partner.i18n?.name, 'CN') || partner.name : ''
+const mainCard = goodsCardHtml(main, { lang: 'CN' })
+const partnerCard = partner ? goodsCardHtml(partner, { lang: 'CN' }) : ''
+const cover = bannerChain(bannerFile, 'CN')
+const coverChain = cover && cover.chain.length > 0 ? encodeURIComponent(JSON.stringify(cover.chain)) : ''
+
+const statusText = ongoing
+  ? '本轮 UP 进行中'
+  : count > 1
+    ? `距上次复刻 ${sinceLast} 天`
+    : `尚未复刻 · 距首次登场 ${sinceLast} 天`
+---
+
+<button
+  class="hist-row glass-panel"
+  type="button"
+  data-action="history"
+  data-entry-index={entryIndex}
+  title={partner ? `${mainName} × ${partnerName}` : mainName}
+>
+  <span class="hr-avatars">
+    <span class={`hr-avatar rarity-${main.rarity}`} set:html={mainCard} />
+    {partner && <span class="hr-avatar hr-avatar-pair rarity-5" set:html={partnerCard} />}
+  </span>
+
+  <span class="hr-main">
+    <span class="hr-line1">
+      <b class="hr-name">
+        {mainName}
+        {partner && <i class="hr-x">×</i>}
+        {partner && partnerName}
+      </b>
+      <span class="hr-count">{count > 1 ? `登场 ${count} 次` : '仅登场 1 次'}</span>
+      {ongoing && <span class="status-pill" data-status-text="ongoing">进行中</span>}
+    </span>
+    <span class="hr-line2">
+      <span>首次 UP {formatDate(first)}</span>
+      <span>最近登场 {formatDate(last)}</span>
+      <span class="hr-status">{statusText}</span>
+    </span>
+    <span class="hr-bar" aria-hidden="true">
+      <span class={`hr-bar-fill${ongoing ? ' is-live' : ''}`} style={`width:${Math.min(100, (sinceLast / 400) * 100)}%`}></span>
+    </span>
+  </span>
+
+  <span class="hr-banner">
+    {cover ? (
+      <img
+        src={cover.src}
+        data-banner-file={bannerFile ?? ''}
+        data-img-chain={coverChain || undefined}
+        data-fallback-name={mainName}
+        alt={mainName}
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <span class="is-missing" role="img" aria-label={mainName}></span>
+    )}
+  </span>
+</button>

@@ -1,0 +1,41 @@
+---
+import type { BannerEntry } from '../../lib/types'
+import type { BannerStatus } from '../../lib/date'
+import { t } from '../../lib/i18n'
+import FilterBar, { type FilterItem } from './FilterBar.astro'
+import ArchiveGroup from './ArchiveGroup.astro'
+import SearchBox from './SearchBox.astro'
+
+export interface ArchiveGroupData {
+  key: BannerStatus
+  banners: BannerEntry[]
+}
+
+interface Props {
+  groups: ArchiveGroupData[]
+  filters: FilterItem[]
+  totalCount: number
+}
+
+const { groups, filters, totalCount } = Astro.props
+---
+
+<section class="archive-section" aria-labelledby="archive-title">
+  <div class="archive-head">
+    <div class="archive-head-main">
+      <h2 id="archive-title" data-i18n="nav.title">{t('CN', 'nav.title')}</h2>
+      <span class="pill-count" data-archive-count>{totalCount}</span>
+    </div>
+  </div>
+
+  <div class="archive-toolbar">
+    <SearchBox />
+    <FilterBar filters={filters} />
+  </div>
+
+  <p class="search-empty" data-search-empty hidden data-i18n="search.empty">{t('CN', 'search.empty')}</p>
+
+  {groups.map((group) => (
+    <ArchiveGroup status={group.key} banners={group.banners} />
+  ))}
+</section>

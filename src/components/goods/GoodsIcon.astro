@@ -1,0 +1,35 @@
+---
+import type { GoodsEntry } from '../../lib/types'
+import { goodsCardHtml } from '../../lib/card'
+import { localized, type Lang } from '../../lib/i18n'
+
+interface Props {
+  goods: GoodsEntry
+  bannerId: number
+  lang?: Lang
+  size?: 'xs' | 'sm' | 'lg'
+  showName?: boolean
+}
+
+const { goods, bannerId, lang = 'CN', size = 'sm', showName = true } = Astro.props
+const name = localized(goods.i18n?.name, lang) || goods.name
+const card = goodsCardHtml(goods, { lang, eager: size === 'lg' })
+---
+
+<button
+  class={`goods-icon goods-icon-${size}`}
+  type="button"
+  data-action="details"
+  data-banner-id={bannerId}
+  aria-label={name}
+  title={name}
+>
+  <span class="goods-card" set:html={card} />
+  {showName && (
+    <span
+      class="goods-name"
+      data-goods-name={goods.id}
+      data-localized-name={JSON.stringify(goods.i18n?.name ?? {})}
+    >{name}</span>
+  )}
+</button>

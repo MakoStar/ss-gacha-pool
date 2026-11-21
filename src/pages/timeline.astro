@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import PeriodCard from '../components/banner/PeriodCard.astro'
+import DateJump from '../components/controls/DateJump.astro'
+import { buildPeriods } from '../lib/data'
+
+const { periods, total, ongoing, avgDays } = buildPeriods()
+const years = [...new Set(periods.map((period) => period.start.slice(0, 4)))]
+
+const monthKey = (period: { start: string }) => period.start.slice(0, 7)
+const monthLabel = (key: string) => `${Number(key.slice(5))} 月`
+
+const monthMap = new Map<string, typeof periods>()
+for (const period of periods) {
+  const key = monthKey(period)
+  const list = monthMap.get(key) ?? []
+  list.push(period)
+  monthMap.set(key, list)
+}
+const monthKeys = [...monthMap.keys()]
+---
+
+<BaseLayout title="卡池时间线" active="timeline" description="Stella Sora 卡池时间线，同期旅人池与秘纹池成组展示">
+  <section class="page-head">
+    <h1>卡池时间线</h1>
+    <p>同期开启的旅人池与秘纹池归为一期 · 共 {total} 期</p>
+  </section>
+
+  <div class="stat-row">
+    <div class="stat-chip glass-panel">
+      <span class="stat-label">时间跨度</span>
+      <b>{years[years.length - 1]} – {years[0]}</b>
+    </div>
+    <div class="stat-chip glass-panel">
+      <span class="stat-label">卡池期数</span>
+      <b>{total}</b>
+    </div>
+    <div class="stat-chip glass-panel">
+      <span class="stat-label">正在开放</span>
+      <b>{ongoing}</b>
+    </div>
+    <div class="stat-chip glass-panel">
+      <span class="stat-label">平均时长</span>
+      <b>{avgDays} 天</b>
+    </div>
+  </div>
+
+  <DateJump />
+
+  <div class="tl-wrap">
+    {years.map((year) => {
+      const yearMonths = monthKeys.filter((key) => key.startsWith(year))
+      return (
+        <section class="tl-year">
+          <h2 class="tl-year-head">
+            <span>{year}</span>
+            <em>{yearMonths.length} 个月</em>
+          </h2>
+          {yearMonths.map((key) => (
+            <section class="tl-month">
+              <header class="tl-month-head">
+                <span class="tl-month-dot"></span>
+                <h3>{monthLabel(key)}</h3>
+                <span class="tl-month-count">{monthMap.get(key)?.length} 期</span>
+              </header>
+              <div class="tl-list">
+                {monthMap.get(key)?.map((period) => <PeriodCard period={period} />)}
+              </div>
+            </section>
+          ))}
+        </section>
+      )
+    })}
+  </div>
+</BaseLayout>

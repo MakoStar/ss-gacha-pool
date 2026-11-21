@@ -1,0 +1,38 @@
+---
+import type { GoodsEntry } from '../../lib/types'
+import { imageChain } from '../../lib/assets'
+import { localized, type Lang } from '../../lib/i18n'
+
+interface Props {
+  goods: GoodsEntry
+  lang?: Lang
+  showName?: boolean
+}
+
+const { goods, lang = 'CN', showName = true } = Astro.props
+const name = localized(goods.i18n?.name, lang) || goods.name
+const link = imageChain({
+  region: lang,
+  cnDir: goods.cnDir ?? undefined,
+  cnFile: goods.cnIcon,
+  apiFile: goods.icon
+})
+const chain = link && link.chain.length > 0 ? encodeURIComponent(JSON.stringify(link.chain)) : ''
+---
+
+<span class={`goods-avatar-wrap rarity-${goods.rarity}`} title={name}>
+  {link ? (
+    <img
+      class="goods-avatar"
+      src={link.src}
+      data-img-chain={chain || undefined}
+      data-fallback-name={name}
+      alt={name}
+      loading="lazy"
+      decoding="async"
+    />
+  ) : (
+    <span class="goods-avatar is-missing" role="img" aria-label={name}></span>
+  )}
+  {showName && <span class="goods-avatar-name">{name}</span>}
+</span>

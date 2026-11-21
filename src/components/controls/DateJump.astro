@@ -1,0 +1,18 @@
+---
+const today = new Date().toISOString().slice(0, 10)
+---
+
+<div class="date-jump">
+  <div class="date-jump-panel" data-date-panel hidden>
+    <input type="date" data-date-input value={today} aria-label="选择日期" />
+    <button type="button" class="date-jump-go" data-date-go>跳转</button>
+  </div>
+  <button type="button" class="date-jump-btn" data-date-toggle title="按日期跳转到卡池" aria-label="按日期跳转到卡池">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <rect x="3.5" y="5" width="17" height="15.5" rx="3" />
+      <path d="M3.5 9.5h17" />
+      <path d="M8 3v3.5M16 3v3.5" />
+      <circle cx="12" cy="14.5" r="1.6" fill="currentColor" stroke="none" />
+    </svg>
+  </button>
+</div>

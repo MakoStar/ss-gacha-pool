@@ -1,0 +1,16 @@
+---
+import { t } from '../../lib/i18n'
+---
+
+<label class="search-box header-search">
+  <span class="search-icon" aria-hidden="true">⌕</span>
+  <input
+    id="banner-search"
+    type="search"
+    autocomplete="off"
+    placeholder={t('CN', 'search.placeholder')}
+    data-i18n-placeholder="search.placeholder"
+    aria-label={t('CN', 'search.placeholder')}
+  />
+  <button type="button" class="search-clear" data-search-clear hidden aria-label={t('CN', 'search.clear')}>×</button>
+</label>

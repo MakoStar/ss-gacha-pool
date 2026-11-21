@@ -1,0 +1,27 @@
+{
+  "name": "ss-gacha-pool",
+  "version": "0.1.0",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "packageManager": "pnpm@12.21.0",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-data.js",
+    "dev": "pnpm run sync && astro dev",
+    "build": "pnpm run sync && astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.6",
+    "astro": "7.4.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@types/node": "^26.6.6",
+    "typescript": "^6.0.3"
+  }
+}
