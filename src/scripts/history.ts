@@ -64,9 +64,17 @@ function formatDay(value: string): string {
   return value ? value.slice(0, 10).replaceAll('-', '/') : ''
 }
 
+/** 卡池持续天数 结束时间为空时不计算 */
+function durationLabel(node: HistoryNode): string {
+  if (!node.end) return ''
+  const days = Math.max(1, Math.round((Date.parse(node.end) - Date.parse(node.start)) / 86400000))
+  return `<em>总计 ${days} 天</em>`
+}
+
 /** 渲染时间树节点 */
 function renderNode(node: HistoryNode, index: number, total: number): string {
   const gap = node.gap !== null ? `<em>间隔 ${node.gap} 天</em>` : '<em>首次 UP</em>'
+  const span = durationLabel(node)
   const end = node.end ? formatDay(node.end) : '至今'
   const mates = node.mates.length > 0
     ? `<div class="ht-mates"><span class="ht-mates-label">同期陪跑</span>${node.mates.map((mate) => `<span class="ht-mate">${historyAvatar(mate)}<i>${escapeHtml(mate.name)}</i></span>`).join('')}</div>`
@@ -77,7 +85,7 @@ function renderNode(node: HistoryNode, index: number, total: number): string {
     : ''
   return `<li class="ht-node${index === total - 1 ? ' is-last' : ''}">
     <span class="ht-dot"></span>
-    <div class="ht-date">${formatDay(node.start)} – ${end} ${gap}</div>
+    <div class="ht-date">${formatDay(node.start)} – ${end} ${gap}${span}</div>
     <div class="ht-body">
       ${historyBanner(node.bannerFile)}
       <div class="ht-item">
@@ -101,7 +109,8 @@ export function openHistoryDialog(index: number): void {
     ? `${entry.main.rarity}★ ${entry.main.kind === 'disc' ? '秘纹' : '旅人'} × ${entry.partner.rarity}★ ${entry.partner.kind === 'disc' ? '秘纹' : '旅人'}`
     : `${entry.main.rarity}★ ${entry.main.kind === 'disc' ? '秘纹' : '旅人'}`
   const stat = entry.avgGap !== null ? `平均间隔 ${entry.avgGap} 天` : `仅登场 ${entry.count} 期`
-  const tree = entry.nodes.map((node, nodeIndex) => renderNode(node, nodeIndex, entry.nodes.length)).join('')
+  const nodes = [...entry.nodes].sort((a, b) => Date.parse(b.start) - Date.parse(a.start))
+  const tree = nodes.map((node, nodeIndex) => renderNode(node, nodeIndex, nodes.length)).join('')
   historyBody.innerHTML = `
     <div class="ht-head">
       <span class="ht-avatars">${historyAvatar(entry.main)}${entry.partner ? historyAvatar(entry.partner) : ''}</span>
