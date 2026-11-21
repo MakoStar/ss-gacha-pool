@@ -16,6 +16,7 @@ export const filterItems = [
   { key: 'upcoming', i18n: 'filter.upcoming' },
   { key: 'ended', i18n: 'filter.ended' },
   { key: 'permanent', i18n: 'filter.permanent' },
+  { key: 'standard', i18n: 'filter.standard' },
   { key: 'trekker', i18n: 'filter.trekker' },
   { key: 'disc', i18n: 'filter.disc' },
   { key: 'limited', i18n: 'filter.limited' },
