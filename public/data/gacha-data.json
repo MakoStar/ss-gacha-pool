@@ -8,7 +8,7 @@
     "TW"
   ],
   "dataSource": "local",
-  "generatedAt": "2026-11-21T17:10:45.915Z",
+  "generatedAt": "2026-11-27T03:36:05.515Z",
   "source": "https://api.ennead.cc/stella",
   "featuredId": 10161,
   "banners": [
@@ -2829,7 +2829,7 @@
       "bucket": "current",
       "permanent": false,
       "startTime": "2026-11-17T12:00:00+08:00",
-      "endTime": "2026-12-08T10:59:59+08:00",
+      "endTime": "2026-12-01T10:59:59+08:00",
       "sort": 997,
       "assets": {
         "banner": "banner_gacha_11143_lang.png",
@@ -4406,7 +4406,7 @@
       "bucket": "current",
       "permanent": false,
       "startTime": "2026-11-17T12:00:00+08:00",
-      "endTime": "2026-12-08T10:59:59+08:00",
+      "endTime": "2026-12-01T10:59:59+08:00",
       "sort": 1997,
       "assets": {
         "banner": null,
